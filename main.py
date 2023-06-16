@@ -20,6 +20,5 @@ def test_google_search(set_browser_resolution, open_url):
 
 
 def test_random_input_search(set_browser_resolution, open_url):
-    browser.open('https://google.com')
     browser.element('[name="q"]').should(be.blank).type('askjdgqiuwehq').press_enter()
     browser.element('[id="result-stats"]').should(have.text('About 0 results'))
